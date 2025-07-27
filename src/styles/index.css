@@ -1,0 +1,29 @@
+/* Main container */
+.resume-container {
+  margin: 10px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* Right side container */
+.resume-summary {
+  width: 60%;
+}
+
+/* Left side container */
+.resume-builder {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 35%;
+}
+
+/* Left side cards */ 
+.resume-builder > * {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  font-family: "MyFont", sans-serif;
+}
+
