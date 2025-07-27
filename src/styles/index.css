@@ -1,6 +1,14 @@
+:root {
+  --main-bg: #AAA1C8;
+  --card-bg: #F5E6E8;
+  --input-border-color: #967AA1;
+  --card-header-color: #192A51;
+}
+
 /* Main container */
 .resume-container {
-  margin: 10px;
+  background-color: var(--main-bg);
+  padding: 10px;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -21,9 +29,40 @@
 
 /* Left side cards */ 
 .resume-builder > * {
+  background-color: var(--card-bg);
   border: 1px solid black;
   border-radius: 20px;
   padding: 20px;
-  font-family: "MyFont", sans-serif;
+  font-family: "IntelOneMono", sans-serif;
 }
 
+/* First container from left */
+.personal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left side cards title */
+.card-title {
+  font-weight: 100;
+  font-family: "Chewy", sans-serif;
+  font-size: 2rem;
+  color: var(--card-header-color);
+}
+
+/* Collapse arrow */
+.collapse-icon {
+  height: 35px;
+  width: auto;
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+.collapse-icon.visible {
+  transform: rotate(180deg);
+}
+
+.visible {
+  transition: .5s ease;
+}

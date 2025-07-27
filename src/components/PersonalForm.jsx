@@ -32,13 +32,14 @@ export default function PersonalForm({ formData, setFormData, section }) {
           id="email"
           value={formData.personal.email}
           placeholder="E-mail"
+          autoComplete="on"
         />
       </div>
       <div className="input-data">
         <label htmlFor="phone">Phone (optional)</label>
         <input
           onChange={(e) => handleChange("phone", e.target.value)}
-          type="text"
+          type="tel"
           id="phone"
           value={formData.personal.phone}
           placeholder="Phone number"
