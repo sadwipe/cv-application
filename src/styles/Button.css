@@ -1,0 +1,19 @@
+.add-button {
+  width: fit-content;
+  padding: 10px 15px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  border-radius: 10px;
+  background-color: var(--card-header-color);
+  color: var(--card-bg)
+}
+
+.add-button > img {
+  height: 30px;
+  width: auto;
+}
+
+.add-button > span {
+  font-size: 1.2rem;
+}

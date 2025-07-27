@@ -46,6 +46,17 @@ export default function PersonalForm({ formData, setFormData, section }) {
         />
       </div>
       <div className="input-data">
+        <label htmlFor="photo">Photo</label>
+        <input
+          onChange={(e) => handleChange("email", e.target.value)}
+          type="email"
+          id="email"
+          value={formData.personal.email}
+          placeholder="E-mail"
+          autoComplete="on"
+        />
+      </div>
+      <div className="input-data">
         <label htmlFor="summary">Summary</label>
         <textarea
           onChange={(e) => handleChange("summary", e.target.value)}

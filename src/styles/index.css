@@ -2,7 +2,7 @@
   --main-bg: #AAA1C8;
   --card-bg: #F5E6E8;
   --input-border-color: #967AA1;
-  --card-header-color: #192A51;
+  --card-header-color: #3f1951;
 }
 
 /* Main container */
@@ -32,8 +32,11 @@
   background-color: var(--card-bg);
   border: 1px solid black;
   border-radius: 20px;
-  padding: 20px;
+  padding: 30px;
   font-family: "IntelOneMono", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* First container from left */

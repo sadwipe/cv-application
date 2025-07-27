@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import PersonalForm from "./components/PersonalForm";
+import Button from "./components/Button";
 
 import { initialData } from "./data/data";
 
@@ -29,10 +30,12 @@ export default function App() {
 
         <section className="education">
           <h1 className="card-title">Education</h1>
+          <Button/>
         </section>
 
         <section className="work">
           <h1 className="card-title">Work Experience</h1>
+          <Button/>
         </section>
 
       </div>
