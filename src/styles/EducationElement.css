@@ -1,0 +1,26 @@
+.education-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collapse-education-icon {
+  height: 35px;
+  width: auto;
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+.collapse-education-icon.visible {
+  transform: rotate(180deg);
+}
+
+.visible {
+  transition: .5s ease;
+}
+
+.education-element {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

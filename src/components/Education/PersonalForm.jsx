@@ -1,4 +1,4 @@
-import "../styles/PersonalForm.css";
+import "../../styles/PersonalForm.css";
 
 export default function PersonalForm({ formData, setFormData, section }) {
 

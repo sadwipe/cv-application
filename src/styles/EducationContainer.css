@@ -1,0 +1,21 @@
+.education-forms {
+  width: 100%;
+}
+
+.education-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collapse-education-icon {
+  height: 35px;
+  width: auto;
+  cursor: pointer;
+}
+
+.education-element {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

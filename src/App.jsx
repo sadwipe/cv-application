@@ -1,9 +1,14 @@
 import { useState } from "react";
 
-import PersonalForm from "./components/PersonalForm";
-import Button from "./components/Button";
+import PersonalForm from "./components/Education/PersonalForm";
+import AddButton from "./components/AddButton";
+import EducationContainer from "./components/Education/EducationContainer";
 
-import { initialData } from "./data/data";
+import DeleteButton from "./components/DeleteButton"
+import EducationForm from "./components/Education/EducationForm";
+
+import { initialData } from "./data/initialFormData";
+import { addEducation } from "./helpers/formUtils";
 
 import './styles/index.css'
 
@@ -30,12 +35,19 @@ export default function App() {
 
         <section className="education">
           <h1 className="card-title">Education</h1>
-          <Button/>
+          {
+          formData.education.length > 0 && 
+            <EducationContainer formData={formData} setFormData={setFormData}/>
+          }
+          <AddButton onClick={() => {
+            setFormData(addEducation(formData));
+            console.log(formData);
+          }}/>
         </section>
 
         <section className="work">
           <h1 className="card-title">Work Experience</h1>
-          <Button/>
+          <AddButton/>
         </section>
 
       </div>

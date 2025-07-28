@@ -1,0 +1,9 @@
+.education-form > * {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.education-form > * > input[type="date"] {
+  padding-right: 20px;
+}
