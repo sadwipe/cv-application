@@ -19,3 +19,9 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.experience-forms {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

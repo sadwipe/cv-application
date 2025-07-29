@@ -1,7 +1,7 @@
 :root {
-  --card-bg: #F5E6E8;
-  --main-bg: #AAA1C8;
-  --input-border-color: #967AA1;
+  --card-bg: #f5e6e8;
+  --main-bg: #aaa1c8;
+  --input-border-color: #967aa1;
   --card-header-color: #3f1951;
 }
 
@@ -25,15 +25,18 @@
   flex-direction: column;
   gap: 15px;
   width: 35%;
+  max-height: 95vh;
+  overflow-y: auto; /* scroll */
+  padding-right: 10px; /* space for scroll bar */
 }
 
-/* Left side cards */ 
+/* Left side cards */
 .resume-builder > * {
   background-color: var(--card-bg);
   border: 1px solid black;
   border-radius: 20px;
   padding: 30px;
-  font-family: "IntelOneMono", sans-serif;
+  font-family: 'IntelOneMono', sans-serif;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -49,7 +52,7 @@
 /* Left side cards title */
 .card-title {
   font-weight: 100;
-  font-family: "Chewy", sans-serif;
+  font-family: 'Chewy', sans-serif;
   font-size: 2rem;
   color: var(--card-header-color);
 }
@@ -59,7 +62,7 @@
   height: 35px;
   width: auto;
   cursor: pointer;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .collapse-icon.visible {
@@ -67,7 +70,7 @@
 }
 
 .visible {
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .education {

@@ -1,22 +1,22 @@
 import { useState } from 'react';
 
-import { removeEducation } from '../../helpers/formUtils';
-
-import EducationForm from './EducationForm';
 import DeleteButton from '../DeleteButton';
+import ExperienceForm from './ExperienceForm';
+
+import { removeExperience } from '../../helpers/formUtils';
+
+import '../../styles/Experience/ExperienceElement.css';
 
 import openIcon from '../../assets/images/open.svg';
 
-import '../../styles/Education/EducationElement.css';
-
-export default function EducationElement({ element, formData, setFormData }) {
+export default function ExperienceElement({ element, formData, setFormData }) {
+  const [title, setTitle] = useState(element.title);
   const [isVisible, setIsVisible] = useState(true);
-  const [title, setTitle] = useState(element.name);
 
   return (
-    <li className='education-element'>
-      <div className='education-header'>
-        <h2 className='education-title'>{title || 'School'}</h2>
+    <li className='experience-element'>
+      <div className='experience-header'>
+        <h2 className='experience-title'>{title || 'Title'}</h2>
         <img
           onClick={() => setIsVisible(!isVisible)}
           src={openIcon}
@@ -25,7 +25,7 @@ export default function EducationElement({ element, formData, setFormData }) {
         />
       </div>
       {isVisible && (
-        <EducationForm
+        <ExperienceForm
           element={element}
           formData={formData}
           setFormData={setFormData}
@@ -33,7 +33,7 @@ export default function EducationElement({ element, formData, setFormData }) {
         />
       )}
       <DeleteButton
-        onClick={() => setFormData(removeEducation(formData, element.id))}
+        onClick={() => setFormData(removeExperience(formData, element.id))}
       />
       <hr />
     </li>

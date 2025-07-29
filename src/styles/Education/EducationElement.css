@@ -2,13 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .collapse-education-icon {
   height: 35px;
   width: auto;
   cursor: pointer;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .collapse-education-icon.visible {
@@ -16,11 +17,15 @@
 }
 
 .visible {
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .education-element {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.education-title {
+  overflow: hidden;
 }

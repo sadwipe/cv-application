@@ -1,0 +1,16 @@
+.experience-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.experience-element {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.experience-title {
+  overflow: hidden;
+}

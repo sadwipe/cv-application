@@ -1,0 +1,20 @@
+.experience-form > * {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.experience-form > * > input[type='date'] {
+  padding-right: 20px;
+}
+
+.experience-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.responsibilities-title {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
