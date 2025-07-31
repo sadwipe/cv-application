@@ -35,3 +35,21 @@
 .input-data > label {
   font-size: 1.2rem;
 }
+
+.custom-file-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f0e6f6;
+  border: 2px solid #b58fc1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.custom-file-label:hover {
+  background-color: #e1cfe9;
+}
+
+.custom-file-wrapper input[type="file"] {
+  display: none;
+}

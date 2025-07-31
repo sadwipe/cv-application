@@ -36,7 +36,7 @@ export default function EducationForm({
           value={element.name}
           placeholder='Name'
           autoComplete='on'
-          maxLength={35}
+          maxLength={50}
           minLength={5}
           type='text'
         />

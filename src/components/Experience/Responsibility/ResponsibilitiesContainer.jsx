@@ -9,7 +9,7 @@ export default function ResponsibilitiesContainer({
 }) {
   return (
     <ul className='responsibilities-container'>
-      {element.responsibilities.map(res => {
+      {element.responsibilities.map((res) => {
         return (
           <ResponsibilityItem
             key={res.id}

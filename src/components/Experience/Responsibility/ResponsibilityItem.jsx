@@ -10,22 +10,21 @@ export default function ResponsibilityItem({
   formData,
   setFormData,
 }) {
-
   function handleChange(value) {
-    const newExperience = formData.experience.map(exp => {
-      if(exp.id === element.id) {
-        const newResponsibilities = exp.responsibilities.map(res => {
-          if(res.id === responsibility.id) {
+    const newExperience = formData.experience.map((exp) => {
+      if (exp.id === element.id) {
+        const newResponsibilities = exp.responsibilities.map((res) => {
+          if (res.id === responsibility.id) {
             return {
               ...res,
-              task: value
-            }
+              task: value,
+            };
           }
           return res;
         });
         return {
           ...exp,
-          responsibilities: newResponsibilities
+          responsibilities: newResponsibilities,
         };
       }
       return exp;
@@ -33,14 +32,14 @@ export default function ResponsibilityItem({
 
     setFormData({
       ...formData,
-      experience: newExperience
-    })
+      experience: newExperience,
+    });
   }
 
   return (
     <li className='responsibility-item'>
       <textarea
-        className="responsibility"
+        className='responsibility'
         onChange={(e) => handleChange(e.target.value)}
         value={responsibility.task}
         name='responsibility'

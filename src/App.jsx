@@ -4,13 +4,19 @@ import PersonalForm from './components/Personal/PersonalForm';
 import AddButton from './components/AddButton';
 import EducationContainer from './components/Education/EducationContainer';
 import ExperienceContainer from './components/Experience/ExperienceContainer';
+import EducationItem from './components/Summary/EducationItem';
+import ExperienceItem from './components/Summary/ExperienceItem';
 
 import { initialData } from './data/initialFormData';
 import { addEducation, addExperience } from './helpers/formUtils';
 
 import './styles/index.css';
+import './styles/ResumeSummary.css';
 
 import openIcon from './assets/images/open.svg';
+import mailIcon from './assets/images/mail.svg';
+import phoneIcon from './assets/images/call.svg';
+import profilePic from './assets/images/caine.jpeg';
 
 export default function App() {
   const [formData, setFormData] = useState(initialData);
@@ -68,7 +74,48 @@ export default function App() {
           />
         </section>
       </div>
-      <div className='resume-summary'></div>
+      <div className='resume-summary'>
+        <div className='personal-summary'>
+          <div className='photo-container'>
+            <img src={formData.personal.photo} alt='Profile photo' />
+          </div>
+          <div className='information-container'>
+            <h1 className='candidate-name'>{formData.personal.fullName}</h1>
+            <div className='contact-container'>
+              <div className='candidate-mail'>
+                <img src={mailIcon} alt='Mail icon' />
+                {formData.personal.email}
+              </div>
+              <div className='candidate-phone'>
+                <img src={phoneIcon} alt='Phone icon' />
+                {formData.personal.phone}
+              </div>
+            </div>
+          </div>
+          <div className='summary-container'>
+            <h2>Summary</h2>
+            <p>{formData.personal.summary}</p>
+          </div>
+        </div>
+        <hr />
+        <div className='education-summary'>
+          <h2>Education</h2>
+          <div className='education-container'>
+            {formData.education.map((element) => (
+              <EducationItem key={element.id} element={element} />
+            ))}
+          </div>
+        </div>
+        <hr />
+        <div className='experience-summary'>
+          <h2>Practical Experience</h2>
+          <div className='experience-container'>
+            {formData.experience.map((element) => (
+              <ExperienceItem key={element.id} element={element} />
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,83 @@
+.resume-summary {
+  background-color: var(--card-bg);
+  padding: 20px;
+  font-family: 'IntelOneMono', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 20px;
+  max-height: 95vh;
+  overflow-y: scroll;
+}
+
+.resume-summary::-webkit-scrollbar {
+  display: none;
+}
+
+.personal-summary {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.photo-container > img {
+  height: 150px;
+  width: 150px;
+  border-radius: 40px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-container > * {
+  display: flex;
+  gap: 5px;
+}
+
+.candidate-name {
+  font-family: 'Chewy', sans-serif;
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.education-summary > h2,
+.summary-container > h2,
+.experience-summary > h2 {
+  font-family: 'Chewy', sans-serif;
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+.education-container,
+.experience-container {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.education-date {
+  color: rgb(100, 100, 100);
+}
+
+.summary-experience-tasks {
+  margin-top: 10px;
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summary-experience-tasks > li {
+  margin-left: 40px;
+}

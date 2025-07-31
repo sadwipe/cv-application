@@ -53,10 +53,13 @@ export function addResponsibility(formData, elementId) {
     if (element.id === elementId) {
       return {
         ...element,
-        responsibilities: [...element.responsibilities, {
-          id: uuidv4(),
-          task: ""
-        }],
+        responsibilities: [
+          ...element.responsibilities,
+          {
+            id: uuidv4(),
+            task: '',
+          },
+        ],
       };
     } else {
       return element;
@@ -69,11 +72,13 @@ export function addResponsibility(formData, elementId) {
 }
 
 export function removeResponsibility(formData, experienceId, resId) {
-  const newExperience = formData.experience.map(exp => {
+  const newExperience = formData.experience.map((exp) => {
     if (exp.id === experienceId) {
       return {
         ...exp,
-        responsibilities: exp.responsibilities.filter(res => res.id !== resId),
+        responsibilities: exp.responsibilities.filter(
+          (res) => res.id !== resId,
+        ),
       };
     } else {
       return exp;

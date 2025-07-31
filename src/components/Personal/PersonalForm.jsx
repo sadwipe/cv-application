@@ -11,6 +11,20 @@ export default function PersonalForm({ formData, setFormData, section }) {
     });
   }
 
+  function handleFileChange(e) {
+    const file = e.target.files[0];
+    if (file) {
+      const imageUrl = URL.createObjectURL(file);
+      setFormData((prev) => ({
+        ...prev,
+        personal: {
+          ...prev.personal,
+          photo: imageUrl,
+        },
+      }));
+    }
+  }
+
   return (
     <form id='personal-form'>
       <div className='input-data'>
@@ -47,14 +61,17 @@ export default function PersonalForm({ formData, setFormData, section }) {
       </div>
       <div className='input-data'>
         <label htmlFor='photo'>Photo</label>
-        <input
-          onChange={(e) => handleChange('email', e.target.value)}
-          type='email'
-          id='photo'
-          value={formData.personal.email}
-          placeholder='E-mail'
-          autoComplete='on'
-        />
+        <div className='custom-file-wrapper'>
+          <label htmlFor='photo' className='custom-file-label'>
+            Choose Photo
+          </label>
+          <input
+            onChange={(e) => handleFileChange(e)}
+            type='file'
+            id='photo'
+            accept='image/png, image/jpeg, image/jpg'
+          />
+        </div>
       </div>
       <div className='input-data'>
         <label htmlFor='summary'>Summary</label>

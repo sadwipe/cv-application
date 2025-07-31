@@ -3,6 +3,7 @@ export const initialData = {
     fullName: 'Lola Lupescu',
     email: 'lola.lupescu2024@gmail.com',
     phone: '0774 492 407 (my owner)',
+    photo: '/src/assets/images/caine.jpeg',
     summary:
       'Enthusiastic and highly motivated companion with a keen sense for adventure and an unbreakable loyalty to her team. Responds immediately to trigger phrases like “do you want?”, “outside”, and “dress-up”, displaying unmatched excitement and tail-wagging readiness. Skilled in walk coordination, emotional support, and spontaneous zoomies. Always dressed to impress (with or without accessories) and ready to brighten any room with her presence.',
   },
@@ -23,18 +24,15 @@ export const initialData = {
       responsibilities: [
         {
           id: 0,
-          task:
-            "Fetches projectiles of all kinds—tennis balls, crumpled reports, and CEO's stress ball.",
+          task: "Fetches projectiles of all kinds—tennis balls, crumpled reports, and CEO's stress ball.",
         },
         {
           id: 1,
-          task:
-            'Performs rigorous taste tests on all dropped food. Especially pizza crusts and half-eaten sandwiches.',
+          task: 'Performs rigorous taste tests on all dropped food. Especially pizza crusts and half-eaten sandwiches.',
         },
         {
           id: 2,
-          task:
-            'Boosts team spirit by wagging tail enthusiastically whenever someone opens a snack drawer.',
+          task: 'Boosts team spirit by wagging tail enthusiastically whenever someone opens a snack drawer.',
         },
       ],
       startDate: '2025-03-01',
