@@ -3,7 +3,7 @@ export const initialData = {
     fullName: 'Marius Bodea',
     email: 'marius.bodea@example.com',
     phone: '+40 700 000 000',
-    photo: '',
+    photo: '/profile.svg',
     summary:
       'Computer Science graduate with practical experience in automated validation, Linux systems, and modern web application development using React and Node.js. Dedicated to writing clean, maintainable, and well-tested code.',
   },
