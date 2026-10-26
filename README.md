@@ -1,19 +1,46 @@
-# React + Vite
+# CV Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and
-some ESLint rules.
+A lightweight, interactive resume builder and live preview application built with React and Vite. Allows users to fill in details, view real-time document updates, and export a clean PDF.
 
-Currently, two official plugins are available:
+![CV Builder Preview](src/assets/images/preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react)
-  uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc)
-  uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript
-with type-aware lint rules enabled. Check out the
-[TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts)
-for information on how to integrate TypeScript and
-[`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Frontend:** React 18, JavaScript (ES6+), HTML5
+* **Styling:** CSS3, Modular Stylesheets
+* **Build Tool:** Vite
+
+---
+
+## Features
+
+* Real-time preview synchronized with form inputs
+* Add, edit, and delete multiple education and work entries
+* Built-in native PDF export via print styles
+
+---
+
+## Getting Started
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/sadwipe/cv-application.git
+   cd cv-application
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
