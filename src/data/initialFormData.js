@@ -1,42 +1,42 @@
 export const initialData = {
   personal: {
-    fullName: 'Lola Lupescu',
-    email: 'lola.lupescu2024@gmail.com',
-    phone: '0774 492 407 (my owner)',
-    photo: '/caine.jpeg',
+    fullName: 'Marius Bodea',
+    email: 'marius.bodea@example.com',
+    phone: '+40 700 000 000',
+    photo: '',
     summary:
-      'Enthusiastic and highly motivated companion with a keen sense for adventure and an unbreakable loyalty to her team. Responds immediately to trigger phrases like “do you want?”, “outside”, and “dress-up”, displaying unmatched excitement and tail-wagging readiness. Skilled in walk coordination, emotional support, and spontaneous zoomies. Always dressed to impress (with or without accessories) and ready to brighten any room with her presence.',
+      'Computer Science graduate with practical experience in automated validation, Linux systems, and modern web application development using React and Node.js. Dedicated to writing clean, maintainable, and well-tested code.',
   },
   education: [
     {
       id: 0,
-      name: 'Dog Training Center',
-      degree: 'Certified Professional Good Girl (CPGG)',
-      startDate: '2025-03-01',
-      endDate: '2025-05-01',
+      name: 'Dunarea de Jos University of Galati',
+      degree: 'B.S. in Computer Science',
+      startDate: '2022-10-01',
+      endDate: '2026-07-01',
     },
   ],
   experience: [
     {
       id: 0,
-      title: 'Intern Professional Good Girl',
-      company: 'Dog Training Center',
+      title: 'Software Developer',
+      company: 'Tech Solutions',
       responsibilities: [
         {
           id: 0,
-          task: "Fetches projectiles of all kinds—tennis balls, crumpled reports, and CEO's stress ball.",
+          task: 'Developed automated test suites and validation workflows for embedded Linux environments.',
         },
         {
           id: 1,
-          task: 'Performs rigorous taste tests on all dropped food. Especially pizza crusts and half-eaten sandwiches.',
+          task: 'Implemented modular UI components and client-side state handling with React.',
         },
         {
           id: 2,
-          task: 'Boosts team spirit by wagging tail enthusiastically whenever someone opens a snack drawer.',
+          task: 'Collaborated on containerized tooling workflows using Docker and Git version control.',
         },
       ],
-      startDate: '2025-03-01',
-      endDate: '2025-05-01',
+      startDate: '2024-03-01',
+      endDate: '2025-10-01',
     },
   ],
 };

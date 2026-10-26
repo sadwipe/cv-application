@@ -16,7 +16,7 @@ import './styles/ResumeSummary.css';
 import openIcon from './assets/images/open.svg';
 import mailIcon from './assets/images/mail.svg';
 import phoneIcon from './assets/images/call.svg';
-import profilePic from './assets/images/caine.jpeg';
+import profilePic from './assets/images/profile.svg';
 
 export default function App() {
   const [formData, setFormData] = useState(initialData);
