@@ -16,13 +16,14 @@ import './styles/ResumeSummary.css';
 import openIcon from './assets/images/open.svg';
 import mailIcon from './assets/images/mail.svg';
 import phoneIcon from './assets/images/call.svg';
-import profilePic from './assets/images/profile.svg';
 
 export default function App() {
   const [formData, setFormData] = useState(initialData);
-
-  // Collapse personal section
   const [isVisible, setIsVisible] = useState(true);
+
+  function handlePrint() {
+    window.print();
+  }
 
   return (
     <div className='resume-container'>
@@ -74,10 +75,20 @@ export default function App() {
           />
         </section>
       </div>
+
       <div className='resume-summary'>
+        {/* Butonul de export în dreapta sus */}
+        <div className='summary-actions'>
+          <button type='button' className='print-btn' onClick={handlePrint}>
+            Export PDF
+          </button>
+        </div>
+
         <div className='personal-summary'>
           <div className='photo-container'>
-            <img src={formData.personal.photo} alt='Profile photo' />
+            {formData.personal.photo && (
+              <img src={formData.personal.photo} alt='Profile photo' />
+            )}
           </div>
           <div className='information-container'>
             <h1 className='candidate-name'>{formData.personal.fullName}</h1>

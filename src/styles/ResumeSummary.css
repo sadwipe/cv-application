@@ -14,6 +14,32 @@
   display: none;
 }
 
+.summary-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.print-btn {
+  background-color: #2b2347;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.print-btn:hover {
+  opacity: 0.9;
+}
+
+.print-btn:active {
+  transform: scale(0.98);
+}
+
 .personal-summary {
   display: flex;
   align-items: center;
@@ -80,4 +106,47 @@
 
 .summary-experience-tasks > li {
   margin-left: 40px;
+}
+
+/* ========================================================
+   Print / Export PDF Media Queries
+   ======================================================== */
+@media print {
+  /* Ascunde panoul din stanga si controalele interactive */
+  .resume-builder,
+  .summary-actions,
+  .collapse-icon {
+    display: none !important;
+  }
+
+  /* Reseteaza wrapper-ul principal pentru document paginat */
+  body,
+  html,
+  .resume-container {
+    background: #ffffff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Formateaza panoul de CV pentru pagina de tiparire */
+  .resume-summary {
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 15mm;
+  }
 }
